@@ -10,11 +10,18 @@ Login-required actions (vouch, publish, manage) deep-link to the hosted store
 (`ato.run/store`); Run buttons deep-link into the PWA's Get & Run flow
 (`app.ato.run`).
 
+![Ato Store running as a capsule](docs/screenshot.png)
+
 ## Run
 
 ```sh
-ato run -U .
+ato run .
 ```
+
+The first sandboxed run asks for ExecutionPlan consent (the policy is small:
+network egress to `api.ato.run` only, no filesystem writes, no secrets) —
+approve in the desktop modal / TTY prompt and it starts. No
+`CAPSULE_ALLOW_UNSAFE` or `-U` needed.
 
 Local development:
 
