@@ -4,6 +4,11 @@ version = "0.1.0"
 type = "app"
 default_target = "main"
 
+[metadata]
+# The default monochrome Ato mark — same icon the store shows for
+# community-published apps without a custom icon.
+store_icon = "https://ato.run/icon_bw.png"
+
 [targets.main]
 runtime = "source"
 driver = "node"
