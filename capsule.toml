@@ -15,6 +15,10 @@ driver = "node"
 runtime_version = "20"
 build = "npm install && npm run build"
 run = "node server/index.mjs"
+# Declared listening port — the sandbox synthesizes its TCP readiness probe
+# from this (a portless run can never honestly report ready on a runner).
+# The server binds $PORT or falls back to 8000, matching this declaration.
+port = 8000
 
 [isolation]
 # Store identity is configuration, not code: the same capsule serves any
